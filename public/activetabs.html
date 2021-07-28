@@ -1,0 +1,405 @@
+<!-- <!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+
+body, html 
+
+{
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink
+
+ {
+
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+
+}
+
+.tablink:hover 
+
+{
+
+  background-color: #777;
+
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+
+.tabcontent 
+
+{
+
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+
+}
+
+
+#Home {background-color: red;}
+
+#News {background-color: green;}
+
+#Contact {background-color: blue;}
+
+#About {background-color: orange;}
+
+</style>
+
+</head>
+
+<body>
+
+<button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>
+
+<button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">
+
+News</button>
+
+<button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
+
+<button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
+
+
+<div id="Home" class="tabcontent">
+  <h3>Home</h3>
+  <p>Home is where the heart is..</p>
+</div>
+
+
+<div id="News" class="tabcontent">
+  <h3>News</h3>
+  <p>Some news this fine day!</p> 
+</div>
+
+
+<div id="Contact" class="tabcontent">
+  <h3>Contact</h3>
+  <p>Get in touch, or swing by for a cup of coffee.</p>
+</div>
+
+
+<div id="About" class="tabcontent">
+  <h3>About</h3>
+  <p>Who we are and what we do.</p>
+</div>
+
+<script>
+
+function openPage(pageName,elmnt,color) {
+
+  var i, tabcontent, tablinks;
+
+  tabcontent = document.getElementsByClassName("tabcontent");
+
+  for (i = 0; i < tabcontent.length; i++) 
+
+  {
+    tabcontent[i].style.display = "none";
+
+  }
+
+
+  tablinks = document.getElementsByClassName("tablink");
+
+  for (i = 0; i < tablinks.length; i++) 
+
+  {
+  
+    tablinks[i].style.backgroundColor = "";
+  
+  }
+
+  document.getElementById(pageName).style.display = "block";
+
+  elmnt.style.backgroundColor = color;
+
+}
+
+// Get the element with id="defaultOpen" and click on it
+
+document.getElementById("defaultOpen").click();
+
+</script>
+   
+</body>
+
+</html> 
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+* {box-sizing: border-box}
+
+body {font-family: "Lato", sans-serif;}
+
+/* Style the tab */
+
+.tab 
+
+{
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 30%;
+  height: 300px;
+}
+
+/* Style the buttons inside the tab */
+
+.tab button 
+
+{
+
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 17px;
+
+}
+
+
+/* Change background color of buttons on hover */
+
+.tab button:hover
+
+{
+
+  background-color: #ddd;
+
+}
+
+/* Create an active/current "tab button" class */
+
+.tab button.active 
+
+{
+
+  background-color: #ccc;
+
+}
+
+/* Style the tab content */
+
+.tabcontent 
+
+{
+
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 70%;
+  border-left: none;
+  height: 300px;
+  display: none;
+
+}
+
+/* Clear floats after the tab */
+
+.clearfix::after
+
+{
+
+  content: "";
+  clear: both;
+  display: table;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h2>Hover Tabs</h2>
+
+<p>Move the mouse over a button inside the tabbed menu:</p>
+
+<div class="tab">
+
+  <button class="tablinks" onmouseover="openCity(event, 'Development')">Development</button>
+
+  <button class="tablinks" onmouseover="openCity(event, 'Designing')">Designing</button>
+  
+  <button class="tablinks" onmouseover="openCity(event, 'Business Development Executive')">Business Development Executive (BDE)</button>
+  
+  <button class="tablinks" onmouseover="openCity(event, 'BackEnd Development')">BackEnd Development</button>
+
+</div>
+
+
+<div id="Development" class="tabcontent">
+
+  <h2>Development</h2>
+  
+  <p> <I>  Software development is a process of writing and maintaining the source code. </I> </p>
+
+</div>
+
+
+<div id="Designing" class="tabcontent">
+
+  <h2>Designing</h2>
+  
+  <p> <I>  A design is a plan to make something. “Design is a plan for arranging elements in such a way as best to accomplish a particular purpose.</I> </p> 
+
+</div>
+
+
+<div id="Business Development Executive" class="tabcontent">
+
+  <h2>Business Development Executive (BDE)</h2>
+  
+  <p> <I> Business development executive is to find new targets and leads to promote the sales and services of the company or organization. </I></p> 
+
+</div>
+
+
+<div id="BackEnd Development" class="tabcontent">
+
+  <h2>BackEnd Development</h2>
+  
+  <p> <I> Back end development refers to the server side of an application and everything that communicates between the database and the browser. </I></p>
+
+</div>
+
+
+<div class="clearfix"></div>
+
+<script>
+
+function openCity(evt, cityName) {
+
+  var i, tabcontent, tablinks;
+  
+  tabcontent = document.getElementsByClassName("tabcontent");
+  
+  for (i = 0; i < tabcontent.length; i++) 
+
+  {
+
+    tabcontent[i].style.display = "none";
+  
+  }
+
+  tablinks = document.getElementsByClassName("tablinks");
+
+  for (i = 0; i < tablinks.length; i++) 
+
+  {
+
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  
+  }
+  
+  document.getElementById(cityName).style.display = "block";
+  
+  evt.currentTarget.className += "active";
+
+}
+
+</script>
+   
+</body>
+
+</html> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
